@@ -1,0 +1,23 @@
+<! DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>クイズアプリ</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    
+        <div class="container">
+            <h3>記号読みクイズ<h3>
+            <p>あなたは、<%= @questions.length %>問中<%= @score.to_s %>問正解でした　</p>
+            <form action="ranking" method="post">
+                <input type="text" name="name" placeholder="名前"><br>
+                <button type="submit">ランキング登録</button>
+            </form>
+            <a href="/"><button>もう一度挑戦！</button></a>
+        </div>
+    
+    
+    <body>
+    </body>
+</html>
+        

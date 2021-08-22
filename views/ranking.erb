@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two">
+  <title>記号読みクイズ</title>
+</head>
+<body>
+  
+  <div class="container">
+    
+    <h3>Ranking</h3>
+    
+    <table>
+      <th>順位</th>
+      <th>名前</th>
+      <th>スコア</th>
+        
+      <% @ranks.each_with_index do |rank, idx| %>
+        <tr>
+          <td><%= idx + 1 %></td>
+          <td><%= rank.name %></td>
+          <td><%= rank.score %></td>
+        </tr>
+      <% end %>
+      
+    </table>
+    <a href="/"><button>クイズをする</button></a>
+  </div>
+      
+  
+
+</body>
+</html>
